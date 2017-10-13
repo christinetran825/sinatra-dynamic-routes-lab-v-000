@@ -32,7 +32,7 @@ class App < Sinatra::Base
     @number1 = params[:number1]
     @number2 = params[:number2]
 
-    case @operation = params[:operation]
+    case params[:operation]
     "#{@number1.to_i} #{@operation} #{@number1.to_i}"
   end
 
