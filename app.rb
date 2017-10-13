@@ -14,7 +14,7 @@ class App < Sinatra::Base
   end
 
   get '/say/:number/:phrase' do
-    @message = params[:number].times do params[:phrase] end
+    @message = params[:number].times { |phrase| params[:phrase] }
     "#{@message}"
   end
 
